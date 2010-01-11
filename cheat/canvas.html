@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas demo</title>
+		<script type="text/javascript">
+			function draw() {
+				var canvas = document.getElementById("demo");
+				var ctx = canvas.getContext("2d");
+				ctx.fillStyle = "white";  
+				ctx.fillRect (10, 10, 280, 130);
+				
+				ctx.fillStyle = "red";  
+				ctx.beginPath()
+				ctx.arc(150, 75, 50, 0, 90, false)
+				ctx.fill()
+			}
+		</script>
+	</head>
+	<body onload="draw()">
+		<canvas id="demo" style="background-color:black" />
+	</body>
+</html>

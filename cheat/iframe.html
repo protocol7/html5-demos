@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type=text/javascript>
+			function onMessage(event) {
+				document.getElementById("thediv").innerHTML = event.data
+			}
+		
+			window.addEventListener("message", onMessage, false)
+		</script>
+	</head>
+	<body>
+		<div id=thediv>Foo</div>
+	</body>
+</html>

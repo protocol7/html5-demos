@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Websockets</title>
+		<script type=text/javascript>
+		
+		function start() {
+			  var ws=new WebSocket("ws://localhost:8080/time")
+			  ws.onmessage=onmessage
+			}
+
+		function onmessage(m) {
+			document.getElementById("time").innerHTML = m.data
+		}
+		</script>
+	</head>
+	<body onload="start()" id=time>
+
+	</body>
+</html>
