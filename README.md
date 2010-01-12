@@ -11,4 +11,4 @@ After that, you should be able to build the websocket server by running:
 
 Start the server by running the JettyRunner class included in the sample.
 
-The code is licensed as [CC-SA](http://creativecommons.org/licenses/by-sa/2.0/). The geolocation demo is based on the similar demo from [html5demos.com](http://html5demos.com)
+The code is licensed under ASL 2.0, except for geo.html which is [CC-SA](http://creativecommons.org/licenses/by-sa/2.0/). geo.html is based on the similar demo from [html5demos.com](http://html5demos.com)
