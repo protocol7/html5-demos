@@ -10,7 +10,7 @@
 <script type=text/javascript>
 
 function success(position) {
-  drawMap(position.coords, document.getElementById("demo"))
+  drawMap(position, document.getElementById("demo"))
 }
 
 navigator.geolocation.getCurrentPosition(success);

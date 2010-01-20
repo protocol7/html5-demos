@@ -2,17 +2,8 @@
 <html>
 	<head>
 		<title>Websockets</title>
-		<script>
-		function start() {
-			var ws = new WebSocket("ws://localhost:8080/time")
-			ws.onmessage = function(m) {
-				document.getElementById("time").innerHTML = m.data
-			}
-			
-		}
-		</script>
 	</head>
-	<body id=time onload="start()">
+	<body>
 
 	</body>
 </html>
