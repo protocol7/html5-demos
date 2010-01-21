@@ -2,8 +2,14 @@
 <html>
 	<head>
 		<title>Websockets</title>
+		<script>
+			var ws = new WebSocket("ws://localhost:8080/time")
+			ws.onmessage = function(m) {
+				document.getElementById("demo").innerHTML = m.data
+			}
+		</script>
 	</head>
-	<body>
+	<body id=demo>
 
 	</body>
 </html>

@@ -21,22 +21,17 @@ public class TimeServlet extends WebSocketServlet {
 		resp.getWriter().write("{\n\t\"time\": \"" + time() + "\"\n}");
 	}
 
-	private String time() {
-		// ugly demo-only code
-		return new SimpleDateFormat("yyyyMMdd HH:mm:ss").format(new Date());
-	}
-	
 	@Override
-	protected WebSocket doWebSocketConnect(HttpServletRequest arg0, String arg1) {
-		return new TweetsWebSocket();
+	protected WebSocket doWebSocketConnect(HttpServletRequest req, String resp) {
+		return new TimeWebSocket();
 	}
 
-	class TweetsWebSocket implements WebSocket, Runnable {
+	class TimeWebSocket implements WebSocket, Runnable {
 		
-
-		private Outbound outbound;
-		private Thread poller;
-
+		public void onMessage(byte frame, String data) {
+			// ...
+		}
+		
 		public void onConnect(Outbound outbound) {
 			this.outbound = outbound;
 			
@@ -45,6 +40,9 @@ public class TimeServlet extends WebSocketServlet {
 			poller.start();
 		}
 
+		private Outbound outbound;
+		private Thread poller;
+		
 		public void run() {
 			boolean interrupted = false;
 			while(!interrupted) {
@@ -62,13 +60,13 @@ public class TimeServlet extends WebSocketServlet {
 			// not used
 		}
 
-		public void onMessage(byte frame, String data) {
-			// not used
-		}
-
 		public void onDisconnect() {
 			poller.interrupt();
 		}
 	}
 
+	private String time() {
+		// ugly demo-only code
+		return new SimpleDateFormat("yyyyMMdd HH:mm:ss").format(new Date());
+	}
 }
