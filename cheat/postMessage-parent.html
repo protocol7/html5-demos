@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>postMessage</title>
+	<script>
+
+	function send(e) {
+		document.getElementById("iframe").contentWindow.postMessage(
+			"Hello world", "*"
+		);
+	}
+	</script>
+	
+</head>
+<body>
+    <input type="submit" onClick=send() />
+
+    <iframe id="iframe" src="postMessage-iframe.html"></iframe>
+</body>
+</html>

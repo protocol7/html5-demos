@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>postMessage</title>
+<script>
+
+window.addEventListener("message", receiveMessage, false);  
+  
+function receiveMessage(e)  {  
+	  document.getElementById("body").innerHTML = e.data;
+}
+</script>
+
+</head>
+<body id="body">
+
+</body>
+</html>

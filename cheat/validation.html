@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Validation</title>
+		<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js type=text/javascript></script>
+		<script>
+			function isDigit(val) {
+				return val.search(/^\d+$/) == 0
+			}
+		
+			function validate() {
+				var result = true;
+
+			  $("input[type=number]").each(function() {
+				if(!isDigit($(this).val())) {
+					alert("Invalid number")
+					result = false
+				}
+			  })				
+				
+				return result
+			}
+		</script>
+	</head>
+	<body>
+		
+		<form action="." onSubmit="return validate()">
+			<input type=number />
+			<input type=submit >
+		</form>
+		
+	</body>
+</html>
