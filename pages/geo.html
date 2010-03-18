@@ -5,9 +5,19 @@
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false" ></script>
 		<script type="text/javascript" src="map.js" ></script>
 
+		<script>
+		
+		navigator.geolocation.getCurrentPosition(success)
+		
+		function success(pos) {
+			drawMap(pos, document.getElementById("map"))
+		}
+		
+		</script
 	</head>
 	<body>
 
+		<div id=map style="width:100%; height: 300px">
 
 	</body>
 </html>

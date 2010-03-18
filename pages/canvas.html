@@ -3,8 +3,23 @@
 	<head>
 		<title>Canvas demo</title>
 		
+		<script>
+		
+		function draw() {
+			var ctx = document.getElementById("canvas").getContext("2d")
+			
+			ctx.fillStyle = "white"
+			ctx.fillRect(10, 10, 280, 130)
+			
+			ctx.fillStyle = "red"
+			ctx.arc(150, 75, 50, 0, 360)
+			ctx.fill()
+		}
+		
+		</script>
+		
 	</head>
-	<body>
-
+	<body onload="draw()">
+		<canvas id=canvas style="background-color:black">
 	</body>
 </html>

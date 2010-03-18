@@ -4,6 +4,10 @@
 	<title>postMessage</title>
 	<script>
 
+	function send() {
+		document.getElementById("iframe").contentWindow.postMessage("Hello world", "*")
+	}
+
 	</script>
 	
 </head>
