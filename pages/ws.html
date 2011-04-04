@@ -4,11 +4,11 @@
 		<title>Websockets</title>
 		
 		<script>
-		
-		var ws = new WebSocket("ws://localhost:8080/time")
-		ws.onmessage = function(m) {
-			document.getElementById("body").innerHTML = m.data
-		}
+
+        var ws = new WebSocket("ws://localhost:8080/time")
+        ws.onmessage = function(m) {
+            document.body.innerHTML = m.data
+        }
 		
 		</script
 		

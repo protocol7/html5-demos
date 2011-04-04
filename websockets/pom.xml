@@ -39,6 +39,6 @@
 		</plugins>
 	</build>
 	<properties>
-		<jetty.version>7.0.2-SNAPSHOT</jetty.version>
+		<jetty.version>7.2.1.v20101111</jetty.version>
 	</properties>
 </project>
